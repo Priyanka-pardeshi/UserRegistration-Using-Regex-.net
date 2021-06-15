@@ -7,6 +7,9 @@ namespace User_Registration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome ");
+            ValidateInput objValidate = new ValidateInput();
+            objValidate.ValidateFirstName("Siddho");
+            Console.ReadKey();
         }
     }
 }
