@@ -48,14 +48,16 @@ namespace User_Registration
 
         public void ValidPassword(string inputPassword)
         {
-            string strPassword = @"[A-Za-z0-9]{8}";
-            if (Regex.IsMatch(inputPassword, strPassword))
+            string passwordChara = @"[A-Za-z0-9]{8}";
+            string passwordOneUpper = @"[A-Z]{1}";
+
+            if (Regex.IsMatch(inputPassword, passwordChara) & Regex.IsMatch(inputPassword, passwordOneUpper))
             {
                 Console.WriteLine("This is  valid Password");
             }
             else
             {
-                Console.WriteLine(" invalid Passwrd");
+                Console.WriteLine("INVALID");
             }
 
         }
