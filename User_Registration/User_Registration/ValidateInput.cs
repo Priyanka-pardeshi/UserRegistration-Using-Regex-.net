@@ -7,7 +7,7 @@ namespace User_Registration
 {
     class ValidateInput
     {
-        public void ValidateFirstName(string firstName)
+        public void ValidateName(string firstName)
         {
             string strValidate = "^[A-Z]{1}[A-Za-z]{3,20}";
             if (Regex.IsMatch(firstName, strValidate))
