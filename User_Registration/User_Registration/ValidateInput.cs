@@ -31,5 +31,33 @@ namespace User_Registration
                 Console.WriteLine(email+" is Not valid Email");
             }
         }
+
+        public void ValidateNumber(string inputNumber)
+        {
+            string intEmail = @"^91\s[0-9]{10}";
+            if (Regex.IsMatch(inputNumber, intEmail))
+            {
+                Console.WriteLine(inputNumber + " Number is valid");
+            }
+            else
+            {
+                Console.WriteLine(inputNumber+" invalid number");
+            }
+
+        }
+
+        public void ValidPassword(string inputPassword)
+        {
+            string strPassword = @"[A-Za-z0-9]{8}";
+            if (Regex.IsMatch(inputPassword, strPassword))
+            {
+                Console.WriteLine("This is  valid Password");
+            }
+            else
+            {
+                Console.WriteLine(" invalid Passwrd");
+            }
+
+        }
     }
 }
