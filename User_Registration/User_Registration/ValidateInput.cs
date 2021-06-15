@@ -19,5 +19,17 @@ namespace User_Registration
                 Console.WriteLine("INVALID");
             }
         }
+
+        public void ValidateEmail(string email)
+        {
+            string validStrEmail = "^abc.[A-za-z]{3,30}@bl.co(.in|.com)";
+            if (Regex.IsMatch(email, validStrEmail))
+            {
+                Console.WriteLine(email + " is valid Email Id");
+            }
+            else {
+                Console.WriteLine(email+" is Not valid Email");
+            }
+        }
     }
 }

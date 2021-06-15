@@ -16,6 +16,10 @@ namespace User_Registration
             string lastName = Console.ReadLine();
             objValidate.ValidateName(lastName);
 
+            Console.WriteLine("Enter valid email ID:");
+            string email = Console.ReadLine();
+            objValidate.ValidateEmail(email);
+
             Console.ReadKey();
         }
     }
