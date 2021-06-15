@@ -51,8 +51,9 @@ namespace User_Registration
             string passwordChara = @"[A-Za-z0-9]{8}";
             string passwordOneUpper = @"[A-Z]{1}";
             string passwordOneNumeric = @"[0-9]{1}";
+            string passwordSpCharater = @"[><,.!@#$%^&*[(})]{1}";
 
-            if (Regex.IsMatch(inputPassword, passwordChara) & Regex.IsMatch(inputPassword, passwordOneUpper) & Regex.IsMatch(inputPassword,passwordOneNumeric))
+            if (Regex.IsMatch(inputPassword, passwordChara) & Regex.IsMatch(inputPassword, passwordOneUpper) & Regex.IsMatch(inputPassword,passwordOneNumeric) & Regex.IsMatch(inputPassword,passwordSpCharater))
             {
                 Console.WriteLine("This is  valid Password");
             }
